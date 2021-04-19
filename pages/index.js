@@ -1,65 +1,57 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className=' bg-default-light h-full w-full min-h-screen text-default-primary flex items-center justify-center text-lg'>
+      <div className='flex flex-col w-full items-center'>
+        <Image
+          src='/logo/SVG.logo.purple.dark.svg'
+          alt='Picture of the author'
+          width='200'
+          height='45'
+          className='object-contain'
+        />
+        <div className='bg-white text-default-primary mt-6 w-1/2 px-12 pt-12 pb-16 shadow-sm'>
+          <div className='flex flex-col'>
+            <div className='my-3 flex flex-col'>
+              <label htmlFor='' className='px-3 font-medium mb-2'>
+                User Name
+              </label>
+              <input
+                type='text'
+                placeholder='John Doe'
+                className=' bg-default-light px-3 py-2'
+              />
+            </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <div className='my-3 flex flex-col'>
+              <label htmlFor='' className='px-3 font-medium mb-2'>
+                Password
+              </label>
+              <input
+                type='password'
+                placeholder='****************'
+                className=' bg-default-light px-3 py-2'
+              />
+            </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+            <div class='flex items-center my-3'>
+              <input
+                id='passwordremember'
+                name='passwordremember'
+                type='checkbox'
+                class='focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded mr-4'
+              />
+              Remember my password
+            </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <button className='  bg-default-primary text-white py-4 px-8 rounded-md mt-5 font-semibold'>
+              LOG IN
+            </button>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className='mt-8 font-medium'>Forgot your password</div>
+      </div>
     </div>
   )
 }
