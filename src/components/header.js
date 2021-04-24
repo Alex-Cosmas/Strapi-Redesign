@@ -1,11 +1,18 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const Header = () => {
   return (
     <nav>
       <div className='bg-gray-50'>
         <div className='flex justify-between mx-auto px-24 py-5 bg-gray-200'>
-          <div>Strapi</div>
+          <Image
+            src='/logo/SVG.logo.purple.dark.svg'
+            alt='Picture of the author'
+            width='200'
+            height='25'
+            className=' float-left object-contain'
+          />
+
           <ul className='flex space-x-3'>
             <li>
               <Link href='/dashboard'>

@@ -1,9 +1,13 @@
 import SignIn from './auth/signin'
+import Login from '../layouts/login'
 
-export default function Home() {
+const Home = () => {
   return (
     <div className=' text-default-primary'>
       <SignIn />
     </div>
   )
 }
+Home.Layout = Login
+
+export default Home
