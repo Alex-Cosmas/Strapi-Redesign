@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+
 @tailwind utilities;
+
+@layer components {
+    .mobile  {
+        @apply text-sm p-6 flex flex-col self-center
+    }
+}
+

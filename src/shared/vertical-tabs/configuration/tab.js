@@ -14,15 +14,15 @@ function Tabs({ children }) {
       className={
         child.props.label === activeTab
           ? [
-              'pl-5 mr-10 h-full text-left tabs__tab',
-              'pl-5 mr-10 h-full text-left tabs__tab-active border-b-2 bg-gray-300 border-white focus:outline-none',
-            ].join(' ')
+            'pl-5 mr-10 h-full text-left tabs__tab hover:bg-gray-100 ',
+            'pl-5 mr-10 h-full text-left tabs__tab-active border-b-2 border-white bg-alternative-1 focus:outline-none',
+          ].join(' ')
           : 'pl-5 mr-10 h-full text-left tabs__tab'
       }
       key={child.props.label}
     >
       <div>{child.props.tabName}</div>
-      ccc
+
     </button>
   ))
 
@@ -30,11 +30,11 @@ function Tabs({ children }) {
 
   return (
     <div className='flex h-full '>
-      <div className='tabs__box w-5/12 flex flex-col h-full justify-between'>
+      <div className='tabs__box w-5/12 flex flex-col flex-grow justify-between'>
         {tabs}
       </div>
-      <div className='bg-gray-700 w-7/12 text-white'>
-        <div className='p-10'>{tabContent}</div>
+      <div className='w-7/12 '>
+        <div className='px-4'>{tabContent}</div>
       </div>
     </div>
   )
